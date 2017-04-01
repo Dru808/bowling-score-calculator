@@ -62,4 +62,82 @@ describe('bowlingCalculator', () => {
     expect(result).to.equal(67);
   });
 
+  it('should give spare bonus on 10th frame', () => {
+    var result = bowlingCalculator([{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 8,
+      turn2: 2
+    },{
+      turn1: 3,
+      turn2: 2
+    }]);
+
+    expect(result).to.equal(13);
+  });
+
+  it('should give a strike bonus on 10th frame', () => {
+    var result = bowlingCalculator([{
+        turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 0,
+      turn2: 0
+    },{
+      turn1: 10,
+      turn2: 0
+    },{
+      turn1: 3,
+      turn2: 2
+    }]);
+
+    expect(result).to.equal(15);
+  });
+
 });
